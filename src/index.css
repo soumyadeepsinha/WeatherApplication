@@ -5,7 +5,8 @@ body {
   font-family: "Roboto Slab", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("./assets/background.jpg");
+  /* image link: https://www.pexels.com/photo/island-during-golden-hour-and-upcoming-storm-1118873/ */
+  background: url("./image/bg1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
