@@ -1,4 +1,4 @@
-[!screenshot](./src/image/WeatherApp.jpg)
+![screenshot](./src/image/WeatherApp.jpg)
 
 It's a basic tutorial projetc for ReactJS
 
