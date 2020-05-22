@@ -1,6 +1,6 @@
 import React from 'react';
-import Forms from './Components/Forms';
-import Weather from './Components/Weather';
+import Forms from './Components/Form/Forms';
+import Weather from './Components/Weather/Weather';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -18,6 +18,7 @@ class App extends React.Component {
       icon: undefined,
       main: undefined,
       celsius: undefined,
+      humidity: undefined,
       temp_max: null,
       temp_min: null,
       description: "",
@@ -86,6 +87,7 @@ class App extends React.Component {
         country: response.sys.country,
         main: response.weather[0].main,
         celsius: this.calCelsius(response.main.temp),
+        humidity: response.main.humidity,
         temp_max: this.calCelsius(response.main.temp_max),
         temp_min: this.calCelsius(response.main.temp_min),
         description: response.weather[0].description,
@@ -110,6 +112,7 @@ class App extends React.Component {
         <Weather
           cityname={this.state.city}
           weatherIcon={this.state.icon}
+          humidity={this.state.humidity}
           temp_celsius={this.state.celsius}
           temp_max={this.state.temp_max}
           temp_min={this.state.temp_min}

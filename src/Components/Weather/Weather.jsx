@@ -10,9 +10,14 @@ const Weather = props => {
           <i className={`wi ${props.weatherIcon} display-1`} />
         </h5>
 
+
         {/* Get Celsius */}
         {props.temp_celsius ? (
-          <h1 className="py-2">{props.temp_celsius}&deg;</h1>
+          <h1 className="py-2">{props.temp_celsius}&deg; c</h1>
+        ) : null}
+
+        {props.humidity ? (
+          <h3 className="py-2">Humidity : {props.humidity}</h3>
         ) : null}
 
         {/* show max and min temp */}
@@ -30,12 +35,13 @@ const Weather = props => {
 
 export default Weather
 
+
 function maxminTemp(max, min) {
   if (max && min) {
     return (
       <h3>
-        <span className="px-4">{max}&deg;</span>
-        <span className="px-4">{min}&deg;</span>
+        <span className="px-4">{max}&deg; c</span>
+        <span className="px-4">{min}&deg; c</span>
       </h3>
     );
   }
